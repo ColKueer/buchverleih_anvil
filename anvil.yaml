@@ -1,7 +1,7 @@
 allow_embedding: false
 dependencies: []
-name: M3 App 1
-package_name: M3_App_1
+name: Buchverleih
+package_name: Buchverleih
 renamed: true
 runtime_options:
   client_version: '3'
