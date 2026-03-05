@@ -8,15 +8,22 @@ components:
   properties: {text: Buchverleih}
   type: Label
 - components:
-  - name: repeating_panel_contents
-    properties: {item_template: Form1.RowTemplate5}
-    type: RepeatingPanel
+  - layout_properties: {slot: footer}
+    name: button_1
+    properties: {text: Kunden Seite}
+    type: Button
+  - layout_properties: {slot: footer}
+    name: button_buecher
+    properties: {text: Bücher Seite}
+    type: Button
+  - layout_properties: {slot: footer}
+    name: button_leihe
+    properties: {text: leihen Seite}
+    type: Button
   layout_properties: {slot: default}
   name: data_grid_contents
   properties:
-    columns:
-    - {data_key: sites, expand: false, id: JKSDUP, title: Seiten, width: 710.8888549804688}
-    - {data_key: contents_button, expand: false, id: VJQQOR, title: Gehe auf Seite}
+    columns: []
   type: DataGrid
 container:
   properties: {html: '@theme:standard-page.html'}

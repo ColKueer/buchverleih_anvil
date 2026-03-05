@@ -1,10 +1,10 @@
-from ._anvil_designer import Form1Template
+from ._anvil_designer import leihenTemplate
 from anvil import *
 
-class Form1(Form1Template):
+
+class leihen(leihenTemplate):
   def __init__(self, **properties):
     # Set Form properties and Data Bindings.
     self.init_components(**properties)
 
     # Any code you write here will run before the form opens.
-    self.repeating_panel_contents.items = [{'sites': 'Bücher'}, {'sites': 'Kunden'}, {'sites': 'leihen'},]
