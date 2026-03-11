@@ -1,5 +1,9 @@
 from ._anvil_designer import StartseiteTemplate
 from anvil import *
+import anvil.server
+import anvil.tables as tables
+import anvil.tables.query as q
+from anvil.tables import app_tables
 
 class Startseite(StartseiteTemplate):
   def __init__(self, **properties):
@@ -8,16 +12,14 @@ class Startseite(StartseiteTemplate):
 
     # Any code you write here will run before the form opens.
 
-  @handle("button_kunden", "click")
+  @handle("button_kunde", "click")
   def button_kunden_click(self, **event_args):
-    open_form('Startseite.GebaeudeSeite',self.item)
+    open_form('Startseite.Kunden')
 
   @handle("button_buecher", "click")
   def button_buecher_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    open_form('Startseite.Buecher')
 
   @handle("button_leihe", "click")
   def button_leihe_click(self, **event_args):
-    """This method is called when the button is clicked"""
-    pass
+    open_form('Startseite.leihen')

@@ -9,7 +9,7 @@ components:
   type: Label
 - components:
   - layout_properties: {slot: footer}
-    name: button_1
+    name: button_kunde
     properties: {text: Kunden Seite}
     type: Button
   - layout_properties: {slot: footer}

@@ -1,12 +1,25 @@
 components:
-- layout_properties: {slot: default}
-  name: content_panel
-  properties: {}
-  type: ColumnPanel
 - layout_properties: {slot: nav-right}
   name: navbar_links
   properties: {}
   type: FlowPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {align: left, text: Bücher}
+  type: Label
+- components:
+  - name: repeating_panel_1
+    properties: {item_template: Startseite.Buecher.RowTemplate1}
+    type: RepeatingPanel
+  layout_properties: {slot: default}
+  name: data_grid_1
+  properties:
+    columns:
+    - {data_key: titel, id: JKSDUP, title: TItel}
+    - {data_key: isbn, id: VJQQOR, title: ISBN}
+    - {data_key: verlag, expand: false, id: OJLQEN, title: Verlag, width: 344.9998779296875}
+    - {data_key: erscheinungsjahr, id: NLJHKY, title: Erscheinungsjahr}
+  type: DataGrid
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
