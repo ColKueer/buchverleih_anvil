@@ -20,6 +20,26 @@ components:
     - {data_key: verlag, expand: false, id: OJLQEN, title: Verlag, width: 344.9998779296875}
     - {data_key: erscheinungsjahr, id: NLJHKY, title: Erscheinungsjahr}
   type: DataGrid
+- components:
+  - name: button_1
+    properties: {text: button_1}
+    type: Button
+  - name: button_2
+    properties: {text: button_2}
+    type: Button
+  - name: button_3
+    properties: {text: button_3}
+    type: Button
+  - name: button_4
+    properties: {text: button_4}
+    type: Button
+  - name: button_5
+    properties: {text: button_5}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: linear_panel_1
+  properties: {}
+  type: LinearPanel
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
