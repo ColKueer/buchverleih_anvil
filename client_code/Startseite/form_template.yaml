@@ -20,6 +20,10 @@ components:
     name: button_leihe
     properties: {text: leihen Seite}
     type: Button
+  - layout_properties: {slot: footer}
+    name: plot_1
+    properties: {}
+    type: Plot
   layout_properties: {slot: default}
   name: data_grid_contents
   properties:
