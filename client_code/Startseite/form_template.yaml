@@ -25,10 +25,19 @@ components:
     name: button_verlag
     properties: {text: Verlage Seite}
     type: Button
-  - layout_properties: {slot: footer}
-    name: plot_kreisdiagramm
+  - components:
+    - layout_properties: {grid_position: 'QNQKCK,QIHVOI'}
+      name: plot_kreisdiagramm
+      properties: {}
+      type: Plot
+    - layout_properties: {grid_position: 'QNQKCK,BQORBH'}
+      name: plot_1
+      properties: {}
+      type: Plot
+    layout_properties: {slot: footer}
+    name: column_panel_1
     properties: {}
-    type: Plot
+    type: ColumnPanel
   layout_properties: {slot: default}
   name: data_grid_contents
   properties:

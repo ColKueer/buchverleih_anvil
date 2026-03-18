@@ -16,10 +16,13 @@ class Buecher(BuecherTemplate):
     Buch.titel AS titel,
     Buch.isbn AS isbn,
     Verlag.name AS verlag,
-    Buch.erscheinungsjahr AS erscheinungsjahr 
+    Buch.erscheinungsjahr AS erscheinungsjahr,
+    geschrieben.FKAutorId AS autor
     FROM Buch 
     JOIN Verlag 
-    ON Buch.fkverlagid = Verlag.VerlagID"""
+    ON Buch.fkverlagid = Verlag.VerlagID
+    JOIN geschrieben
+    ON Buch.ISBN = geschrieben.FKISBN"""
 
     data = anvil.server.call('query_database_dict', f'{sql}')
 

@@ -34,14 +34,14 @@ class leihen(leihenTemplate):
   @handle("button_kunden", "click")
   def button_kunden_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    open_form('Startseite.Kunden')
 
   @handle("button_buecher", "click")
   def button_buecher_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    open_form('Startseite.Buecher')
 
   @handle("button_verlag", "click")
   def button_verlag_click(self, **event_args):
     """This method is called when the button is clicked"""
-    pass
+    open_form('Startseite.leihen')

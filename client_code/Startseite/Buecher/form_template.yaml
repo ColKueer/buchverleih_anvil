@@ -19,6 +19,7 @@ components:
     - {data_key: isbn, id: VJQQOR, title: ISBN}
     - {data_key: verlag, expand: false, id: OJLQEN, title: Verlag, width: 344.9998779296875}
     - {data_key: erscheinungsjahr, id: NLJHKY, title: Erscheinungsjahr}
+    - {data_key: autor, id: TCMOBD, title: Autor ID}
   type: DataGrid
 - components:
   - event_bindings: {}
