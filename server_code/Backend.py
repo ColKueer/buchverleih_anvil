@@ -36,3 +36,24 @@ def get_daten():
     verliehen = cursor.fetchone()[0]
     nicht_verliehen = gesamt - verliehen
     return verliehen, nicht_verliehen
+
+@anvil.server.callable
+def get_verspaetung_daten():
+  with sqlite3.connect(data_files["bibliothek.db"]) as conn:
+    cursor = conn.cursor()
+    cursor.execute("""
+            SELECT COUNT(*)
+            FROM Leihe
+            WHERE tatsaechlichesRueckgabedatum IS NOT NULL
+            AND tatsaechlichesRueckgabedatum > geplantesRueckgabedatum
+        """)
+    verspaetet = cursor.fetchone()[0]
+    cursor.execute("""
+            SELECT COUNT(*)
+            FROM Leihe
+            WHERE tatsaechlichesRueckgabedatum IS NOT NULL
+            AND tatsaechlichesRueckgabedatum <= geplantesRueckgabedatum
+        """)
+    nicht_verspaetet = cursor.fetchone()[0]
+
+    return verspaetet, nicht_verspaetet

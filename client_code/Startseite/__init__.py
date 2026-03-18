@@ -37,7 +37,24 @@ class Startseite(StartseiteTemplate):
       values=[verliehen, nicht_verliehen],
       hole=0.3
     )])
+    lade
     fig.update_layout(title="Bücherstatus")
     self.plot_kreisdiagramm.figure = fig
+    
+  def lade_verspaetungs_diagramm(self, **event_args):
+    verspaetet, nicht_verspaetet = anvil.server.call('get_verspaetung_daten')
+    fig = go.Figure(data=[
+      go.Bar(
+        x=['Verspätet', 'Nicht verspätet'],
+        y=[verspaetet, nicht_verspaetet],
+        marker_color=['red', 'green']
+      )
+    ])
+    fig.update_layout(
+      title="Verspätete Rückgaben",
+      xaxis_title="Status",
+      yaxis_title="Anzahl"
+    )
+    self.plot_balkendiagramm.figure = fig
 
 
