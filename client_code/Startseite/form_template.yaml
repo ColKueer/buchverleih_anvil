@@ -31,7 +31,7 @@ components:
       properties: {}
       type: Plot
     - layout_properties: {grid_position: 'QNQKCK,BQORBH'}
-      name: plot_verspaetet
+      name: plot_balkendiagramm
       properties: {}
       type: Plot
     layout_properties: {slot: footer}

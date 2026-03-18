@@ -37,7 +37,7 @@ class Startseite(StartseiteTemplate):
       values=[verliehen, nicht_verliehen],
       hole=0.3
     )])
-    lade
+    self.lade_verspaetungs_diagramm()
     fig.update_layout(title="Bücherstatus")
     self.plot_kreisdiagramm.figure = fig
     
