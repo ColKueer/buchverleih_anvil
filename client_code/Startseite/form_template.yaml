@@ -21,7 +21,7 @@ components:
     properties: {text: leihen Seite}
     type: Button
   - layout_properties: {slot: footer}
-    name: plot_1
+    name: plot_kreisdiagramm
     properties: {}
     type: Plot
   layout_properties: {slot: default}

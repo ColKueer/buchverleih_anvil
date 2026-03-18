@@ -24,3 +24,19 @@ class Startseite(StartseiteTemplate):
   @handle("button_leihe", "click")
   def button_leihe_click(self, **event_args):
     open_form('Startseite.leihen')
+
+  def form_show(self, **event_args):
+    # Daten vom Server holen
+    verliehen, nicht_verliehen = anvil.server.call('get_daten')
+
+    # Kreisdiagramm erstellen
+    fig = go.Figure(data=[go.Pie(
+      labels=['Verliehen', 'Nicht verliehen'],
+      values=[verliehen, nicht_verliehen],
+      hole=0.3  # optional: Donut-Style 😎
+    )])
+
+    fig.update_layout(title="Bücherstatus")
+
+    # In dein Plot-Element einsetzen
+    self.plot_kreisdiagramm.figure = fig
