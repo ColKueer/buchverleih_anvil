@@ -3,10 +3,6 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
-- layout_properties: {slot: title}
-  name: label_1
-  properties: {text: Kunden}
-  type: Label
 - components:
   - event_bindings: {}
     layout_properties: {}
@@ -14,39 +10,38 @@ components:
     properties: {text: Main Menü}
     type: Button
   - event_bindings: {}
+    name: button_kunden
+    properties: {text: Kunden Seite}
+    type: Button
+  - event_bindings: {}
     layout_properties: {}
     name: button_buecher
     properties: {text: Bücher Seite}
     type: Button
   - event_bindings: {}
-    layout_properties: {}
     name: button_leihe
     properties: {text: Leih Seite}
-    type: Button
-  - event_bindings: {}
-    layout_properties: {}
-    name: button_verlag
-    properties: {text: Verlage Seite}
     type: Button
   layout_properties: {slot: left-nav}
   name: linear_panel_1
   properties: {}
   type: LinearPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: Verlage}
+  type: Label
 - components:
   - name: repeating_panel_1
-    properties: {item_template: Startseite.Kunden.RowTemplate2}
+    properties: {item_template: Startseite.Buecher.RowTemplate1}
     type: RepeatingPanel
   layout_properties: {slot: default}
   name: data_grid_1
   properties:
     columns:
-    - {data_key: kundennummer, expand: false, id: JKSDUP, title: Kundennummer, width: 137.22216796875}
-    - {data_key: email, expand: false, id: VJQQOR, title: E-Mail, width: 187.7777099609375}
-    - {data_key: wohnadresse, id: OJLQEN, title: Wohnadresse}
-    - {data_key: telefonnummer, id: SLKMIZ, title: Telefonnummer}
-    - {data_key: vorname, id: WNJZGY, title: Vorname}
-    - {data_key: nachname, expand: false, id: EDBLOJ, title: Nachname, width: 158.333251953125}
-    margin: [null, '0', null, '0']
+    - {data_key: id, id: JKSDUP, title: ID}
+    - {data_key: name, id: VJQQOR, title: Name}
+    - {data_key: email, expand: false, id: OJLQEN, title: E-Mail, width: 344.9998779296875}
+    - {data_key: stadt, id: NLJHKY, title: Stadt}
   type: DataGrid
 container:
   properties: {html: '@theme:standard-page.html'}

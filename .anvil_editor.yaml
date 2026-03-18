@@ -7,6 +7,8 @@ unique_ids:
     Startseite.Buecher: '1772710041528246932863281.4396'
     Startseite.Buecher.RowTemplate1: '1773220910052877704021266.9858'
     Startseite.Kunden: '1772710005403295852474691.7215'
+    Startseite.Kunden.RowTemplate2: '1773826742931652119479386.351'
+    Startseite.Verlage: '1773826327693666211478471.2438'
     Startseite.leihen: '1772710053409691468821264.1191'
   modules: {}
   scripts: {}

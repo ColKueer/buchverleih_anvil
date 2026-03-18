@@ -21,23 +21,25 @@ components:
     - {data_key: erscheinungsjahr, id: NLJHKY, title: Erscheinungsjahr}
   type: DataGrid
 - components:
-  - layout_properties: {}
+  - event_bindings: {}
+    layout_properties: {}
     name: button_menue
     properties: {text: Main Menü}
     type: Button
-  - layout_properties: {}
+  - event_bindings: {}
+    layout_properties: {}
     name: button_kunden
     properties: {text: Kunden Seite}
     type: Button
-  - layout_properties: {}
+  - event_bindings: {}
+    layout_properties: {}
     name: button_leihe
     properties: {text: Leih Seite}
     type: Button
-  - name: button_4
-    properties: {text: button_4}
-    type: Button
-  - name: button_5
-    properties: {text: button_5}
+  - event_bindings: {}
+    layout_properties: {}
+    name: button_verlag
+    properties: {text: Verlage Seite}
     type: Button
   layout_properties: {slot: left-nav}
   name: linear_panel_1

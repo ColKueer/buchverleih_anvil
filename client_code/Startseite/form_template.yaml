@@ -20,6 +20,11 @@ components:
     name: button_leihe
     properties: {text: leihen Seite}
     type: Button
+  - event_bindings: {}
+    layout_properties: {slot: footer}
+    name: button_verlag
+    properties: {text: Verlage Seite}
+    type: Button
   - layout_properties: {slot: footer}
     name: plot_kreisdiagramm
     properties: {}
@@ -30,6 +35,7 @@ components:
     columns: []
   type: DataGrid
 container:
+  event_bindings: {}
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
 is_package: true
