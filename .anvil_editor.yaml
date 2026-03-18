@@ -10,6 +10,7 @@ unique_ids:
     Startseite.Kunden.RowTemplate2: '1773826742931652119479386.351'
     Startseite.Verlage: '1773826327693666211478471.2438'
     Startseite.leihen: '1772710053409691468821264.1191'
+    Startseite.leihen.RowTemplate3: '1773828831512372409428205.75385'
   modules: {}
   scripts: {}
   server_modules:

@@ -3,6 +3,49 @@ components:
   name: navbar_links
   properties: {}
   type: FlowPanel
+- components:
+  - event_bindings: {}
+    layout_properties: {}
+    name: button_menue
+    properties: {text: Main Menü}
+    type: Button
+  - event_bindings: {}
+    layout_properties: {}
+    name: button_kunden
+    properties: {text: Kunden Seite}
+    type: Button
+  - event_bindings: {}
+    layout_properties: {}
+    name: button_buecher
+    properties: {text: Kunden Seite}
+    type: Button
+  - event_bindings: {}
+    name: button_verlag
+    properties: {text: Verlage Seite}
+    type: Button
+  layout_properties: {slot: left-nav}
+  name: linear_panel_1
+  properties: {}
+  type: LinearPanel
+- layout_properties: {slot: title}
+  name: label_1
+  properties: {text: leihen}
+  type: Label
+- components:
+  - name: repeating_panel_1
+    properties: {item_template: Startseite.leihen.RowTemplate3}
+    type: RepeatingPanel
+  layout_properties: {slot: default}
+  name: data_grid_1
+  properties:
+    columns:
+    - {data_key: id, id: JKSDUP, title: Ausleih ID}
+    - {data_key: ausleihdatum, id: VJQQOR, title: Ausleihdatum}
+    - {data_key: geplantesrd, id: OJLQEN, title: geplantes Rückgabedatum}
+    - {data_key: tatsaechlichesrd, id: PDKOZG, title: tatsächliches Rückgabedatum}
+    - {data_key: isbn, id: LYIBSN, title: ISBN}
+    - {data_key: kundenid, id: KTBOGJ, title: Kunden ID}
+  type: DataGrid
 container:
   properties: {html: '@theme:standard-page.html'}
   type: HtmlTemplate
